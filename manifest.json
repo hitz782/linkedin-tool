@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Extension",
+  "version": "1.0.0",
+  "description": "LinkedIn Extension using React, TS, Vite, and CRXJS",
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.linkedin.com/*",
+        "https://linkedin.com/*"
+      ],
+      "js": [
+        "src/content.tsx"
+      ]
+    }
+  ],
+  "permissions": []
+}
